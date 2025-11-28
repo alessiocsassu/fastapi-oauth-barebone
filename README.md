@@ -287,11 +287,11 @@ class ProductManager(BaseManager[Product, ProductService]):
 
 It provides:
 
-- get_or_404`()`
-- get_all`()`
-- create`()` with safe error handling
-- update`()` with existence checks
-- delete`()` returning a standardized `BaseDelete` schema
+- `get_or_404()`
+- `get_all()`
+- `create()` with safe error handling
+- `update()` with existence checks
+- `delete()` returning a standardized `BaseDelete` schema
 
 This ensures a consistent behavior across all endpoints.
 
