@@ -1,6 +1,8 @@
 # 🧱 Barebone FastAPI OAuth2
 
 [![Use this template](https://img.shields.io/badge/GitHub-Use%20this%20template-success?style=for-the-badge&logo=github)](https://github.com/alessiocsassu/fastapi-oauth-barebone/generate)
+[![Latest Release](https://img.shields.io/github/v/release/alessiocsassu/fastapi-oauth-barebone?style=for-the-badge&logo=github)](https://github.com/alessiocsassu/fastapi-oauth-barebone/releases)
+[![License](https://img.shields.io/github/license/alessiocsassu/fastapi-oauth-barebone?style=for-the-badge)](LICENSE)
 
 
 ## ⚙️ Key Technologies
