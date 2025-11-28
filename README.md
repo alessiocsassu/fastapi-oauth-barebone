@@ -1,5 +1,8 @@
 # 🧱 Barebone FastAPI OAuth2
 
+[![Use this template](https://img.shields.io/badge/GitHub-Use%20this%20template-success?style=for-the-badge&logo=github)](https://github.com/alessiocsassu/fastapi-oauth-barebone/generate)
+
+
 ## ⚙️ Key Technologies
 
 | Component | Technology |
