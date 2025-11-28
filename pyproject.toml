@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "fastapi-oauth-base"
+version = "0.1.0"
+description = "Barebones FastAPI OAuth2 with Password (and hashing), Bearer with JWT tokens, and SQLAlchemy integration."
+authors = ["Alessio <alessiocsassu@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.0"
+uvicorn = "^0.30.0"
+sqlalchemy = "^2.0.34"
+alembic = "^1.13.2"
+python-dotenv = "^1.0.1"
+pydantic = { version = "^2.9.0", extras = ["email"] }
+pydantic-settings = "^2.4.0"
+asyncpg = "^0.30.0"
+python-jose = {extras = ["cryptography"], version = "^3.5.0"}
+passlib = { extras = ["bcrypt"], version = "==1.7.4" }
+bcrypt = "==3.2.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.2"
+black = "^24.8.0"
+isort = "^5.13.2"
+mypy = "^1.10.1"
