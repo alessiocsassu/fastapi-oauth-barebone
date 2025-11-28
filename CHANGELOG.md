@@ -1,28 +1,27 @@
 # 📜 Changelog
-Tutti i cambiamenti rilevanti di questo progetto sono documentati in questo file.
 
-Il formato segue lo standard [Keep a Changelog](https://keepachangelog.com/it/1.0.0/) e la convenzione [Semantic Versioning](https://semver.org/lang/it/).
+All relevant changes to this project are documented in this file. The format follows the [Keep a Changelog](https://keepachangelog.com/it/1.0.0/) standard and the [Semantic Versioning](https://semver.org/lang/it/) convention.
 
 ## [Unreleased]
+
 ### Added
-- (In lavorazione)
+- (In progress)
 
 ### Changed
-- (In lavorazione)
-
+- (In progress)
+  
 ### Fixed
-- (In lavorazione)
+- (In progress)
 
 ---
 
 ## [1.0.0]
+
 ### Added
-- Barebone con API utenti pronto all'utilizzo
+- Barebone with user API ready for use
 
 ### Changed
 - -
 
 ### Fixed
 - -
-
----

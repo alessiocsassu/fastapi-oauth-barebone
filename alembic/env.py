@@ -21,7 +21,6 @@ config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
 target_metadata = Base.metadata
 
 def run_migrations_offline():
-    """Esegue le migrazioni in modalità offline (senza connessione al DB)."""
     url = config.get_main_option("sqlalchemy.url")
     context.configure(
         url=url,
@@ -34,7 +33,6 @@ def run_migrations_offline():
         context.run_migrations()
 
 def do_run_migrations(connection):
-    """Funzione helper che esegue effettivamente le migrazioni."""
     context.configure(
         connection=connection,
         target_metadata=target_metadata,
@@ -45,7 +43,6 @@ def do_run_migrations(connection):
         context.run_migrations()
 
 async def run_migrations_online():
-    """Esegue le migrazioni in modalità online (con connessione async)."""
     connectable = async_engine_from_config(
         config.get_section(config.config_ini_section),
         prefix="sqlalchemy.",

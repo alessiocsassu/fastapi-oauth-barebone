@@ -1,34 +1,33 @@
 # 🧱 Barebone FastAPI OAuth2
 
-## ⚙️ Tecnologie principali
+## ⚙️ Key Technologies
 
-| Componente | Tecnologia | Descrizione |
-|-------------|-------------|--------------|
-| **Linguaggio** | Python 3.12+ | Moderno, leggibile e con tipizzazione statica |
-| **Framework API** | FastAPI | Framework asincrono per la creazione di API REST |
-| **Server** | Uvicorn (ASGI) | Server leggero e performante per FastAPI |
-| **Database** | PostgreSQL | Database relazionale robusto e scalabile |
-| **ORM** | SQLAlchemy | Gestione delle entità e query tramite oggetti Python |
-| **Migrazioni** | Alembic | Gestione versioning e rollback dello schema database |
-| **Validazione dati** | Pydantic | Tipizzazione e validazione automatica di input/output |
-| **Autenticazione** | JWT (JSON Web Token) | Gestione token di accesso e refresh |
-| **Configurazione** | python-dotenv | Gestione variabili d’ambiente (.env) |
-
----
-
-## 🧰 Tooling e DevOps
-
-| Area | Strumento | Descrizione |
-|------|------------|-------------|
-| **Ambiente sviluppo** | Docker + Docker Compose | Contenitori per API e DB |
-| **Testing** | Pytest | Test unitari e d’integrazione |
-| **Migrazioni DB** | Alembic | Gestione versioning schema database |
-| **Sicurezza** | JWT + bcrypt | Crittografia password e token-based authentication |
-| **Gestione env** | .env / dotenv | Gestione configurazioni locali e segreti |
+| Component | Technology |
+|-----------|-------------|
+| **Language** | Python 3.12+ |
+| **API Framework** | FastAPI |
+| **Server** | Uvicorn (ASGI) |
+| **Database** | PostgreSQL |
+| **ORM** | SQLAlchemy |
+| **Migrations** | Alembic |
+| **Data Validation** | Pydantic |
+| **Authentication** | JWT (JSON Web Token) |
 
 ---
 
-## 🗂️ Struttura
+## 🧰 Tooling & DevOps
+
+| Area | Tool |
+|-------|--------|
+| **Development Environment** | Docker + Docker Compose |
+| **Testing** | Pytest |
+| **DB Migrations** | Alembic |
+| **Security** | JWT + bcrypt |
+| **Environment Management** | .env |
+
+---
+
+## 🗂️ Project Structure
 
 ```text
 fastapi-oauth-base/
@@ -100,41 +99,41 @@ fastapi-oauth-base/
 ```
 ---
 
-## Lista comandi per iniziare
+## 🚀 Setup Commands
 
-1. Creazione e attivazione venv
+1. Create and activate the virtual environment
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
-2. Selezionare la versione di python del venv
-   
-3. Installare e aggiornare poetry
+2. Select the Python version from the virtual environment (in your IDE)
+
+3. Install and update poetry
 
 ```bash
 pip install poetry
 poetry install --no-root
 ```
 
-4. Creare file .env
+4. Create the `.env` file
 
 ```bash
 cp .env.example .env
 ```
 
-5. Buildare con docker
+5. Build and start services with docker
 ```bash
 docker compose up --build -d
 ```
 
-6. Da dentro il container lanciare le migration con alembic
+6. Run alembic migrations inside the container
 ```bash
 docker exec -it fastapi_app_container alembic revision --autogenerate -m "init schema"
 docker exec -it fastapi_app_container alembic upgrade head
 ```
 
-7. Verificare che tutto sia andato a buon fine con i test automatici (opzionale)
+7. Run automated tests (opzionale)
 ```bash
 docker exec -it fastapi_test_container pytest tests/
 ```
