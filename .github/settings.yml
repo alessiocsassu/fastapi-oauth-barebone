@@ -1,0 +1,17 @@
+repository:
+  name: fastapi-oauth-base
+  description: "FastAPI OAuth2 barebone starter template."
+  topics: fastapi, oauth2, template, python, sqlalchemy
+  private: false
+  default_branch: master
+
+branches:
+  - name: master
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+      enforce_admins: true
+      required_status_checks:
+        strict: true
+        contexts: []
+      restrictions: null
