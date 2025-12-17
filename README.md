@@ -106,41 +106,45 @@ fastapi-oauth-base/
 
 ## 🚀 Setup Commands
 
-1. Create and activate the virtual environment
+Launch the './build.sh' command or follow the steps:
+
+1. Verify if the directory alembic/version exist and if not create it
+
+2. Create and activate the virtual environment
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
-2. Select the Python version from the virtual environment (in your IDE)
+3. Select the Python version from the virtual environment (in your IDE)
 
-3. Install and update poetry
+4. Install and update poetry
 
 ```bash
 pip install poetry
 poetry install --no-root
 ```
 
-4. Create the `.env` file
+5. Create the `.env` file
 
 ```bash
 cp .env.example .env
 ```
 
-5. Build and start services with docker
+6. Build and start services with docker
 ```bash
 docker compose up --build -d
 ```
 
-6. Run alembic migrations inside the container
+7. Run alembic migrations inside the container
 ```bash
-docker exec -it fastapi_app_container alembic revision --autogenerate -m "init schema"
-docker exec -it fastapi_app_container alembic upgrade head
+docker exec -it app alembic revision --autogenerate -m "init schema"
+docker exec -it app alembic upgrade head
 ```
 
-7. Run automated tests (opzionale)
+8. Run automated tests (opzionale)
 ```bash
-docker exec -it fastapi_test_container pytest tests/
+docker exec -it test pytest tests/
 ```
 
 ---

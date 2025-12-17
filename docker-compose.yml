@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    container_name: fastapi_app_container
+    container_name: app
     working_dir: /
     ports:
       - "8000:8000"
@@ -14,7 +14,7 @@ services:
   
   test:
     build: .
-    container_name: fastapi_test_container
+    container_name: test
     #command: pytest ./tests
     command: tail -f /dev/null 
     volumes:
@@ -26,7 +26,7 @@ services:
 
   db:
     image: postgres:15
-    container_name: postgres_db_container
+    container_name: db
     restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
@@ -37,5 +37,11 @@ services:
     ports:
       - "5432:5432"
 
+  redis:
+    image: "redis:alpine"
+    container_name: redis
+    ports:
+      - "6379:6379"
+      
 volumes:
   postgres_data:
