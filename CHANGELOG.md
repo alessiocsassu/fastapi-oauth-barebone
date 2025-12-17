@@ -6,7 +6,15 @@ and this project adheres to **Semantic Versioning (SemVer)**.
 
 ---
 
-## [1.0.1] - 2025-01-01
+## [1.0.2] - 2025-12-17
+
+### Added installation script
+
+[1.0.2]: https://github.com/alessiocsassu/fastapi-oauth-barebone/releases/tag/v1.0.2
+
+---
+
+## [1.0.1] - 2025-11-51
 
 ### Added Licence MIT
 
@@ -14,7 +22,8 @@ and this project adheres to **Semantic Versioning (SemVer)**.
 
 ---
 
-## [1.0.0] - 2025-01-01
+## [1.0.0] - 2025-11-15
+
 ### 🎉 Initial stable release
 
 This is the first official release of the **FastAPI OAuth2 Barebone Template**, designed to provide a clean and scalable starter project for backend applications.
